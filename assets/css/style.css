@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+
+* {
+    box-sizing: border-box;
+    font: inherit;
+    color: inherit;
+}
+
+body {
+    font-family: "Barlow", sans-serif;
+    padding: 0;
+    margin: 0;
+    color: hsl(230, 29%, 20%);
+    overflow-x: hidden;
+}
+
+p {
+    max-width: 600px;
+}
+
+#container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 24px;
+    position: relative;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+.navigation {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 10px;
+    position: relative;
+}
+
+.navigation--item {
+    text-decoration: none;
+    margin: auto 40px;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.navigation :nth-child(4) {
+    height: 3px;
+    width: 3px;
+    border: 2px solid hsl(231, 7%, 65%);
+    border-radius: 50%;
+}
+
+.navigation--item__active {
+    color: hsl(231, 7%, 65%);
+}
+
+.navigation--item:hover {
+    text-decoration: underline;
+}
+
+header::after {
+    content: "";
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    right: -200px;
+    border-bottom-left-radius: 25%;
+    z-index: -10;
+    background-color: hsl(207, 33%, 95%);
+}
+
+main {
+    display: flex;
+    height: 90vh;
+    align-items: center;
+}
+
+.main--content {
+    flex: 1;
+}
+
+.headline {
+    color: hsl(231, 7%, 65%);
+    margin: 0;
+    padding: 0;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.headline span {
+    background-color: hsl(230, 29%, 20%);
+    margin-right: 20px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: hsl(207, 33%, 95%);
+}
+
+.title {
+    font-size: 54px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.description {
+    color: hsl(231, 7%, 65%);
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.demo--btn {
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: hsl(0, 100%, 68%);
+    color: hsl(207, 33%, 95%);
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.preview {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: right;
+    margin-left: 40px;
+}
+
+.main--img {
+    flex: 1;
+    padding: 10px;
+    width: 100%;
+    height: 50%;
+    background: url(../../images/illustration-devices.svg) no-repeat;
+    background-size: 100%;
+}
