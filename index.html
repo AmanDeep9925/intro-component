@@ -43,10 +43,36 @@
                         >Login</a
                     >
                 </nav>
+
+                <nav class="mobile-navigation hide">
+                    <a href="#" class="navigation--item">Product</a>
+                    <a href="#" class="navigation--item">Features</a>
+                    <a href="#" class="navigation--item">Pricing</a>
+                    <a href="#" class="navigation--item"></a>
+                    <a
+                        href="#"
+                        class="navigation--item navigation--item__active"
+                        >Login</a
+                    >
+                </nav>
+
+                <div class="mobile-btn">
+                    <div id="close" class="hide">
+                        <img src="./images/icon-close.svg" alt="" />
+                    </div>
+
+                    <div id="open" class="show">
+                        <img src="./images/icon-hamburger.svg" alt="" />
+                    </div>
+                </div>
             </header>
 
             <main>
                 <h1></h1>
+                <div class="main--img">
+                    <img src="./images/illustration-devices.svg" alt="" />
+                </div>
+
                 <div class="main--content">
                     <p class="headline"><span>New</span>Monograph Dashboard</p>
                     <h1 class="title">Powerful insights into your team</h1>
@@ -54,18 +80,32 @@
                         Project planning and time tracking for agile teams
                     </p>
 
-                    <p>
+                    <p class="demo">
                         <button class="demo--btn">Schedule a demo</button>
-                        <span class="preview">To
-                        see a preview</span>
+                        <span class="preview">To see a preview</span>
                     </p>
-                </div>
-
-                <div class="main--img">
-
                 </div>
             </main>
         </div>
-
     </body>
+    <script>
+        const closeBtn = document.querySelector("#close");
+        const openBtn = document.querySelector("#open");
+        const mobileNav = document.querySelector(".mobile-navigation");
+
+        closeBtn.addEventListener("click", () => {
+            mobileNav.classList.toggle("hide");
+            closeBtn.classList.remove("show");
+            closeBtn.classList.add("hide");
+            openBtn.classList.add("show");
+        });
+
+        openBtn.addEventListener("click", (e) => {
+            mobileNav.classList.toggle("hide");
+            openBtn.classList.remove("show");
+            openBtn.classList.add("hide");
+            
+            closeBtn.classList.add("show");
+        });
+    </script>
 </html>
